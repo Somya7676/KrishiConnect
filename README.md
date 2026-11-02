@@ -1,35 +1,59 @@
-# KrishiConnect – Starter Structure
+﻿# KrishiConnect - Farmer Marketplace
 
-A starter scaffold for the TechZen Farmer Marketplace & Community Portal.
+KrishiConnect is a full-stack agricultural marketplace connecting farmers, buyers, sellers and agricultural vendors.
 
-## Stack
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- Database: MongoDB (Atlas recommended)
-- ODM: Mongoose
+## Technology Stack
+- React.js
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT Authentication
+- bcryptjs
+- Multer
 
-## First run
-1. Install Node.js LTS.
-2. Open this folder in VS Code.
-3. Open two terminals.
+## Features
+- User Registration and Login
+- JWT Authentication
+- Role-Based Access Control
+- Protected Routes
+- Agricultural Product Marketplace
+- Product Search and Categories
+- Product Image Upload
+- Product Details
+- Seller Contact
+- Seller Dashboard
+- Product Create, Read, Update and Delete APIs
 
-Frontend:
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## Project Setup
 
-Backend (second terminal):
-```bash
-cd backend
-npm install
-copy .env.example .env
-npm run dev
-```
+### Backend
+1. Open the backend folder.
+2. Run npm install.
+3. Copy .env.example to .env.
+4. Configure MongoDB URI and JWT_SECRET.
+5. Run npm start.
 
-Add your MongoDB Atlas connection string to `backend/.env` as `MONGODB_URI`.
-The frontend runs on the Vite URL shown in the terminal (usually http://localhost:5173).
-The backend runs on http://localhost:5000.
+### Frontend
+1. Open another terminal.
+2. Open the frontend folder.
+3. Run npm install.
+4. Run npm run dev.
 
-Note: This is only the initial project scaffold. Features will be implemented step by step.
+## Local Development URLs
+- Frontend: http://localhost:5173
+- Backend: http://localhost:5000
+
+## Environment Security
+Never upload actual .env credentials to GitHub.
+Uploaded development images are excluded using .gitignore.
+
+## Future Improvements
+- Cloud Image Storage
+- Order Management
+- Payment Integration
+- Product Editing Interface
+- Production Deployment
+
+## Repository
+https://github.com/Somya7676/KrishiConnect
