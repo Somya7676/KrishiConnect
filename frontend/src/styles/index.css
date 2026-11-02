@@ -1169,3 +1169,67 @@ button, input { font: inherit; }
     line-height: 1.6;
   }
 }
+
+
+
+
+/* Authentication API messages */
+
+.auth-error {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #ba3030;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.auth-success {
+  padding: 12px;
+  border-radius: 8px;
+  background: #edf8ee;
+  color: #26723a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.auth-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+/* Logged-in user Navbar */
+
+.nav-user {
+  color: #347d49;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .nav-user {
+    font-size: 11px;
+  }
+}
+
+
+
+/* My Products - Add Product button visibility fix */
+
+main.section .section-heading a.sell-btn {
+  color: #ffffff;
+  background-color: #15803d;
+  opacity: 1;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+}
+
+main.section .section-heading a.sell-btn:hover {
+  background-color: #166534;
+  color: #ffffff;
+}

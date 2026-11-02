@@ -2,12 +2,30 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
+import authRoutes from './routes/authRoutes.js'
+import productRoutes from './routes/productRoutes.js'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 dotenv.config()
+
+
+const currentFile = fileURLToPath(import.meta.url)
+const currentDirectory = path.dirname(currentFile)
 
 const app = express()
 app.use(cors({ origin: 'http://localhost:5173' }))
 app.use(express.json())
+
+// Serve uploaded product images
+app.use(
+  '/uploads',
+  express.static(path.join(currentDirectory, 'uploads'))
+)
+
+app.use('/api/auth', authRoutes)
+// Product routes
+app.use('/api/products', productRoutes)
 
 app.get('/', (_req, res) => {
   res.json({ success: true, message: 'KrishiConnect API is running.' })

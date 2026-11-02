@@ -3,3 +3,11 @@ dist/
 .env
 .DS_Store
 *.log
+
+# Uploaded product images
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Environment variables
+.env.*
+!.env.example
